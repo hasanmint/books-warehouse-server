@@ -10,9 +10,7 @@ app.use(cors());//use cors()
 app.use(express.json());//body parse
 
 
-
 //db connection
-
 const uri = "mongodb+srv://dbUser1:yZ2c5RrLiQCAwaAA@cluster0.qyrzo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 console.log('connected');
@@ -39,7 +37,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-    res.send('test');
+    res.send('404 Page');
 });
 
 app.listen(port, () => {
